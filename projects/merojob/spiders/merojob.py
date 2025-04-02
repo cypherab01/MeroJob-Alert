@@ -21,15 +21,13 @@ class MeroJobSpider(scrapy.Spider):
             yield response.follow(self.base_url + next_page, callback=self.parse)
 
     def parse_job_detail(self, response):
-        keywords = ["next.js", 
-         "react", 
-         "react native", 
-         'react-native', 
-         'frontend developer', 
-         'full stack developer',
-         'nextjs',
-         'nextjs developer',
-         'react developer',
+        keywords = ["Django developer", 
+         "ML intern", 
+         "AI intern", 
+         "Python developer", 
+         "Software developer", 
+         "Software engineer",
+         "Full stack Django developer"
          ]
         raw_text = response.css("div.card *::text").getall()
         cleaned_text = [text.strip().replace("\xa0", " ") for text in raw_text if text.strip()]
