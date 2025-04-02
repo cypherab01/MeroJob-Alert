@@ -33,7 +33,7 @@ Ensure you have **Python** and **Scrapy** installed on your system.
 
 ## **Running a Scrapy Spider**
 
-To run a spider from any project, navigate to the respective project folder and use:
+To run a spider from any project, use:
 
 ```bash
 scrapy runspider projects/[projectname]/spiders/[filename].py -O projects/merojob/output/output.json
